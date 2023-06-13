@@ -1,0 +1,142 @@
+
+
+
+<form
+    *ngIf="bookForm"
+    [formGroup]="bookForm"
+    (submit) = "createBook()"
+>
+
+<div>
+    <label>Título:</label>
+    <input
+        placeholder="Título"
+        formControlName="titulo"
+    >
+    <p
+        *ngIf="!bookForm.get('titulo')?.valid
+            && (bookForm.get('titulo')?.dirty || bookForm.get('titulo')?.touched)"
+        class="error"
+    >El campo es requerido</p>
+</div>
+
+
+<div>
+    <label>Autor:</label>
+    <input
+        placeholder="Autor"
+        formControlName="autor"
+    >
+    <p
+        *ngIf="!bookForm.get('autor')?.valid
+            && (bookForm.get('autor')?.dirty || bookForm.get('autor')?.touched)"
+        class="error"
+    >El campo es requerido</p>
+</div>
+
+
+
+<div>
+    <label>Género:</label>
+    <input
+        placeholder="Género"
+        formControlName="genero"
+    >
+    <p
+        *ngIf="!bookForm.get('genero')?.valid
+            && (bookForm.get('genero')?.dirty || bookForm.get('genero')?.touched)"
+        class="error"
+    >El campo es requerido</p>
+</div>
+
+
+<div>
+    <label>Subgénero:</label>
+    <input
+        placeholder="Subgénero"
+        formControlName="subgenero"
+    >
+
+</div>
+
+
+<div>
+    <label>Sinopsis:</label>
+    <textarea
+        placeholder="Sinopsis"
+        formControlName="sinopsis"
+    ></textarea>
+    <p
+        *ngIf="!bookForm.get('sinopsis')?.valid
+            && (bookForm.get('sinopsis')?.dirty || bookForm.get('sinopsis')?.touched)"
+        class="error"
+    >La longitud máxima son 1000 caracteres</p>
+</div>
+
+
+<div>
+    <label>Portada:</label>
+    <input
+        placeholder="URL, imagen de portada"
+        formControlName="portada"
+    >
+    <p
+        *ngIf="!bookForm.get('portada')?.valid
+            && (bookForm.get('portada')?.dirty || bookForm.get('portada')?.touched)"
+        class="error"
+    >El campo es requerido</p>
+</div>
+
+
+<div>
+    <label>Fecha de publicación:</label>
+    <input
+        placeholder="Fecha de publicación"
+        formControlName="fechaPublicacion"
+    >
+    <p
+        *ngIf="!bookForm.get('fechaPublicacion')?.valid
+            && (bookForm.get('fechaPublicacion')?.dirty || bookForm.get('fechaPublicacion')?.touched)"
+        class="error"
+    >El campo es requerido</p>
+</div>
+
+
+<div>
+    <label>Páginas:</label>
+    <input
+        placeholder="Número de páginas"
+        formControlName="paginas"
+    >
+    <p
+        *ngIf="!bookForm.get('paginas')?.valid
+            && (bookForm.get('paginas')?.dirty || bookForm.get('paginas')?.touched)"
+        class="error"
+    >El campo es requerido</p>
+</div>
+
+
+<div>
+    <label>Copias:</label>
+    <input
+        placeholder="Copias"
+        formControlName="copias"
+    >
+    <p
+        *ngIf="!bookForm.get('copias')?.valid
+            && (bookForm.get('copias')?.dirty || bookForm.get('copias')?.touched)"
+        class="error"
+    >El campo es requerido</p>
+</div>
+
+
+<button type="submit">{{  book ? 'Editar' : 'Añadir' }}</button>
+
+
+
+
+
+
+
+
+</form>

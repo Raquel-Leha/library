@@ -1,0 +1,14 @@
+<br>
+<input 
+    [(ngModel)]="filterValue"
+>
+<br>
+<div class="book__list">
+    <app-book
+        *ngFor="let book of originalBooks | filter:filterValue"
+        [bookInfo]="book"
+        (onSelectBook)="selectBook(book)"
+        (onDeleteBook)="deleteBook(book)"
+    ></app-book>
+</div>
+<p>Libros seleccionados: {{ counter }}</p>

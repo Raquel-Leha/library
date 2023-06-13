@@ -1,0 +1,22 @@
+
+
+header{
+    width: auto;
+    height: 80px;
+    background-color: burlywood;
+    display: flex;
+    gap:100px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+a{
+    color: red;
+    text-decoration: none;
+}
+
+a:hover{
+    font-size: larger;
+    font-weight: bolder;
+}

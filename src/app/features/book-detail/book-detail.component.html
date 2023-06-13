@@ -1,0 +1,14 @@
+<figure>
+  <div *ngIf="book" class="book">
+    <img class="book__img" [src]="book.portada" />
+    <div>
+      <p>{{ book.titulo }}</p>
+      <p>{{ book.autor }}</p>
+      <p>{{ book.genero }}</p>
+      <p>{{ book.sinopsis }}</p>
+      <p>{{ book.fechaPublicacion }}</p>
+      <p>{{ book.paginas }}</p>
+      <p>{{ book.copias }}</p>
+    </div>
+  </div>
+</figure>
