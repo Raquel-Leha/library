@@ -2,13 +2,24 @@
 <input 
     [(ngModel)]="filterValue"
 >
+<select>
+    <option value="titulo">Título</option>
+    <option value="autor">Autor</option>
+</select>
 <br>
 <div class="book__list">
     <app-book
-        *ngFor="let book of originalBooks | filter:filterValue"
+        *ngFor="let book of originalBooks |order | filter:filterValue |pagination: currentPage" 
         [bookInfo]="book"
         (onSelectBook)="selectBook(book)"
         (onDeleteBook)="deleteBook(book)"
     ></app-book>
 </div>
+<button 
+   *ngIf= "currentPage > 1"
+   (click)="changePage(currentPage - 1)">Anterior</button>
+   <span> {{currentPage}} </span>
+<button 
+*ngIf="currentPage < maxPage"
+(click)="changePage(currentPage + 1 )">Siguiente</button>
 <p>Libros seleccionados: {{ counter }}</p>

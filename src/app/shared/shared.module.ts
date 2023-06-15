@@ -5,7 +5,9 @@ import { CommonModule } from '@angular/common';
 import { BookFormComponent } from './components/book-form/book-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { FilterPipe } from './pipes/filter.pipe';
+import { FilterPipe } from './pipes/filter/filter.pipe';
+import { PaginationPipe } from './pipes/pagination/pagination.pipe';
+import { OrderPipe } from './pipes/order/order.pipe';
 
 
 
@@ -13,7 +15,9 @@ import { FilterPipe } from './pipes/filter.pipe';
 @NgModule({
   declarations: [
     BookFormComponent,
-    FilterPipe
+    FilterPipe,
+    PaginationPipe,
+    OrderPipe
   ],
   imports: [
     CommonModule,
@@ -22,7 +26,9 @@ import { FilterPipe } from './pipes/filter.pipe';
   ],
   exports: [
     BookFormComponent,
-    FilterPipe
+    FilterPipe,
+    PaginationPipe,
+    OrderPipe
   ]
 })
 export class SharedModule { }

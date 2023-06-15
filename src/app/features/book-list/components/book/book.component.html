@@ -9,14 +9,13 @@
 >
   <img class="book__img" [src]="bookInfo.portada" />
  
-  <div>
+  
     <a [routerLink]="['../book-detail', bookInfo._id]">Más información</a>
-    <br>
+    
     <a [routerLink]="['../edit-book', bookInfo._id]">Editar</a>
-    <br>
+    
     <button
-      style="background-color: salmon"
       (click)="deleteBook($event)"
     >Eliminar</button>
-  </div>
+  
 </div>

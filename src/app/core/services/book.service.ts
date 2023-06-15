@@ -44,7 +44,7 @@ export class BookService {
 
  }
 
- getBook(_id: string): Observable<BookITransformed> {
+ getBook(_id: string): Observable<BookI> {
    return this.http.get<BookI>(this.url + _id);
  }
 

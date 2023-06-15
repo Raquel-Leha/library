@@ -1,19 +1,25 @@
 .book {
     display: flex;
     flex-direction: column;
-    border: 1px solid grey;
+    align-items: center;
+    justify-content:space-between;
     margin: 32px;
-    width: 200px;
+    width: 250px;
+    height: 500px;
 
     &__info {
         padding: 8px;
     }
 
     &__img {
-        width: 200px;
+        width: 250px;
+        height: 400px;
     }
 
     &--selected {
-        border: 1px solid coral;
+        border: 1px solid burlywood;
     }
+
 }
+
+

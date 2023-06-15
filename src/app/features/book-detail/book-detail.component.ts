@@ -1,8 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import { switchMap, tap } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import { BookI, BookITransformed } from 'src/app/core/services/book.models';
+import { BookI } from 'src/app/core/services/book.models';
 import { BookService } from 'src/app/core/services/book.service';
 
 
@@ -11,10 +10,12 @@ import { BookService } from 'src/app/core/services/book.service';
   templateUrl: './book-detail.component.html',
   styleUrls: ['./book-detail.component.scss']
 })
-export class BookDetailComponent {
+export class BookDetailComponent implements OnInit{
 
   public book?: BookI;
 
+ngOnInit(): void {}
+  
 
 
     constructor(
@@ -32,5 +33,6 @@ export class BookDetailComponent {
     })
    
 }
+
 
 }

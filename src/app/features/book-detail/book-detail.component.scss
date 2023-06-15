@@ -1,19 +1,19 @@
-.book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid grey;
-    margin: 32px;
-    width: 200px;
-
-    &__img {
-        width: 200px;
-    }
-
+figure {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 50px;
+  align-items: center;
 }
 
-figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bookImg {
+  width: 500px;
+  border: 1px solid burlywood;
+}
+
+.infoBook {
+  width: 600px;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
 }

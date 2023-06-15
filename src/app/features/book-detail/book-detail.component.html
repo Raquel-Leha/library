@@ -1,14 +1,24 @@
-<figure>
-  <div *ngIf="book" class="book">
-    <img class="book__img" [src]="book.portada" />
-    <div>
-      <p>{{ book.titulo }}</p>
-      <p>{{ book.autor }}</p>
-      <p>{{ book.genero }}</p>
-      <p>{{ book.sinopsis }}</p>
-      <p>{{ book.fechaPublicacion }}</p>
-      <p>{{ book.paginas }}</p>
-      <p>{{ book.copias }}</p>
-    </div>
+<figure *ngIf="book">
+
+  <div>
+    <img class="bookImg" [src]="book.portada" />
   </div>
+
+  <div class="infoBook">
+    <p>Título: {{ book.titulo }}</p>
+    <p>Autor/es: {{ book.autor }}</p>
+    <p>Género: {{ book.genero }}</p>
+    <p>Sinopsis: {{ book.sinopsis }}</p>
+
+
+    <div >
+      <p>Fecha de edición: {{ book.fechaPublicacion }}</p>
+      <p>Páginas: {{ book.paginas }}</p>
+      <p> Copias: {{ book.copias }}</p>
+      
+    </div>
+
+
+  </div>
+
 </figure>
