@@ -2,13 +2,14 @@
 
 
 <form
+    class="container"
     *ngIf="bookForm"
     [formGroup]="bookForm"
     (submit) = "createBook()"
 >
 
-<div>
-    <label>Título:</label>
+<div class="form_div">
+    <label class="form_label">Título:</label>
     <input
         placeholder="Título"
         formControlName="titulo"
@@ -21,8 +22,9 @@
 </div>
 
 
-<div>
-    <label>Autor:</label>
+<div class="form_div">
+    
+    <label class="form_label">Autor:</label>
     <input
         placeholder="Autor"
         formControlName="autor"
@@ -36,8 +38,8 @@
 
 
 
-<div>
-    <label>Género:</label>
+<div class="form_div">
+    <label class="form_label">Género:</label>
     <input
         placeholder="Género"
         formControlName="genero"
@@ -50,8 +52,8 @@
 </div>
 
 
-<div>
-    <label>Subgénero:</label>
+<div class="form_div">
+    <label class="form_label">Subgénero:</label>
     <input
         placeholder="Subgénero"
         formControlName="subgenero"
@@ -60,8 +62,8 @@
 </div>
 
 
-<div>
-    <label>Sinopsis:</label>
+<div class="form_div">
+    <label class="form_label">Sinopsis:</label>
     <textarea
         placeholder="Sinopsis"
         formControlName="sinopsis"
@@ -74,8 +76,8 @@
 </div>
 
 
-<div>
-    <label>Portada:</label>
+<div class="form_div">
+    <label class="form_label">Portada:</label>
     <input
         placeholder="URL, imagen de portada"
         formControlName="portada"
@@ -88,8 +90,8 @@
 </div>
 
 
-<div>
-    <label>Fecha de publicación:</label>
+<div class="form_div">
+    <label class="form_label">Fecha de publicación:</label>
     <input
         placeholder="Fecha de publicación"
         formControlName="fechaPublicacion"
@@ -102,8 +104,8 @@
 </div>
 
 
-<div>
-    <label>Páginas:</label>
+<div class="form_div">
+    <label class="form_label">Páginas:</label>
     <input
         placeholder="Número de páginas"
         formControlName="paginas"
@@ -116,8 +118,8 @@
 </div>
 
 
-<div>
-    <label>Copias:</label>
+<div class="form_div">
+    <label class="form_label">Copias:</label>
     <input
         placeholder="Copias"
         formControlName="copias"
@@ -130,7 +132,7 @@
 </div>
 
 
-<button type="submit">{{  book ? 'Editar' : 'Añadir' }}</button>
+<button class="button-style" type="submit">{{  book ? 'Editar' : 'Añadir' }}</button>
 
 
 
