@@ -5,4 +5,16 @@
   <br />
   <a [routerLink]="['new-book']">Añadir libro</a>
   <br />
+  <div *ngIf="!authService.loggedIn()">
+    <a [routerLink]="['signin']">Sign-in</a>
+    <br />
+    <a [routerLink]="['signup']">Registrarse</a>
+  </div>
+  <div *ngIf="authService.loggedIn()">
+    <br />
+    <a (click)= "authService.logout()">LogOut</a>
+    <br />
+    <a [routerLink]="['my-books']">Mis libros</a>
+  </div>
+
 </header>

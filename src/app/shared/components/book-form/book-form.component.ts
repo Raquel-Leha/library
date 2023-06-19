@@ -1,8 +1,8 @@
-import { BookService } from './../../../core/services/book.service';
+import { BookService } from '../../../core/services/bookServices/book.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { BookITransformed } from 'src/app/core/services/book.models';
+import { BookITransformed } from 'src/app/core/services/bookServices/book.models';
 
 @Component({
   selector: 'app-book-form',

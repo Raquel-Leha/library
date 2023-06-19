@@ -2,14 +2,15 @@
 <input 
     [(ngModel)]="filterValue"
 >
-<select>
-    <option value="titulo">Título</option>
-    <option value="autor">Autor</option>
+<select [(ngModel)]="orderBy" (change)="capturar()">
+    <option value="0">Filtrar por ...</option>
+    <option *ngFor="let dato of datos">{{dato}}</option>
 </select>
+
 <br>
 <div class="book__list">
     <app-book
-        *ngFor="let book of originalBooks |order | filter:filterValue |pagination: currentPage" 
+        *ngFor="let book of originalBooks |order:verSeleccion | filter:filterValue  |pagination: currentPage" 
         [bookInfo]="book"
         (onSelectBook)="selectBook(book)"
         (onDeleteBook)="deleteBook(book)"

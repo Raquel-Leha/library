@@ -1,10 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { BookITransformed } from 'src/app/core/services/book.models';
+import { BookITransformed } from 'src/app/core/services/bookServices/book.models';
 
 export const NUM_BOOKS_PAGE: number = 4;
 
 @Pipe({
-  name: 'pagination'
+  name: 'pagination',
+  pure: true
 })
 export class PaginationPipe implements PipeTransform {
 

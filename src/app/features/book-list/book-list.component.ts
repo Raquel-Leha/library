@@ -1,6 +1,6 @@
 
-import { BookService } from './../../core/services/book.service';
-import { BookI, BookITransformed } from './../../core/services/book.models';
+import { BookService } from '../../core/services/bookServices/book.service';
+import { BookI, BookITransformed } from '../../core/services/bookServices/book.models';
 import { Component, OnInit} from '@angular/core';
 import { NUM_BOOKS_PAGE } from 'src/app/shared/pipes/pagination/pagination.pipe';
 
@@ -14,11 +14,14 @@ import { NUM_BOOKS_PAGE } from 'src/app/shared/pipes/pagination/pagination.pipe'
 })
 export class BookListComponent {
 
+  public datos: string[] = [];
   public originalBooks: BookI[] = [];
   public counter = 0;
   public filterValue: string = '';
   public currentPage: number = 1;
   public maxPage: number = 1;
+  public orderBy: string = '0';
+  public verSeleccion: string = '';
   
 
   constructor(
@@ -26,6 +29,7 @@ export class BookListComponent {
   ){}
 
   public ngOnInit(): void{
+    this.datos = ["autor", "titulo"];
     this.getBooks();
   }
 
@@ -48,6 +52,12 @@ export class BookListComponent {
 public changePage(page: number) {
   this.currentPage = page;
 
+}
+
+
+public capturar(){
+  this.verSeleccion = this.orderBy;
+  console.log(this.verSeleccion);
 }
 
 

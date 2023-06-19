@@ -1,7 +1,7 @@
-import { BookService } from './../../core/services/book.service';
+import { BookService } from '../../core/services/bookServices/book.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BookI } from 'src/app/core/services/book.models';
+import { BookI } from 'src/app/core/services/bookServices/book.models';
 
 @Component({
   selector: 'app-edit-book',
