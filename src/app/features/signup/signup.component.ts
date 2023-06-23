@@ -31,6 +31,7 @@ signUp(){
     res => {
       console.log(res);
       localStorage.setItem('token', res.token);
+      localStorage.setItem('email', res.email);
       this.router.navigate(['my-books']);
 
     },

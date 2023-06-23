@@ -1,1 +1,25 @@
+<br>
+
+
+
+<select [(ngModel)]="orderBy" (change)="capturar()">
+    <option value="0">Ordenar por ...</option>
+    <option *ngFor="let dato of datos">{{dato}}</option>
+</select>
+
+
+
+<br>
+<div class="book__list">
+    <app-bo
+        *ngFor="let book of originalBooks |order:verSeleccion" 
+        [bookInfo]="book"
+        (onDeleteBook)="deleteBook(book)"
+    ></app-bo>
+</div>
+
+
+
+
+
 

@@ -3,10 +3,11 @@ const Book = require("../models/Book");
 exports.addBook = async (req,res) => {
     try {
 
-        let book;
+       let book;
 
         // Añadimos el libro a la coleccion
         book = new Book (req.body);
+        console.log(book);
 
         await book.save();
         res.send(book);
@@ -30,6 +31,7 @@ exports.listBooks = async (req,res) => {
         
     }
 }
+
 
 exports.upDateBook = async (req,res) => {
     try {

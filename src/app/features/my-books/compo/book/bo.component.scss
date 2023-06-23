@@ -2,24 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content:space-between;
     margin: 32px;
     width: 250px;
     height: 500px;
 
-   
+    &__info {
+        padding: 8px;
+    }
 
     &__img {
         width: 250px;
         height: 400px;
     }
-
     &__img:hover{
-      border: 2px solid #4B1248;
-    }
-
-    &__info {
-        margin-top: 15px;
-    }
+        border: 2px solid #4B1248;
+      }
 
 
 }

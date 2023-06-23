@@ -2,3 +2,26 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.div_input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    background: #F0C27B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4B1248, #F0C27B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 50%;
+    margin-bottom: 50px;
+    padding: 7px;
+}
+
+.div_buttons_pages {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}

@@ -3,21 +3,28 @@
 header{
     width: auto;
     height: 80px;
-    background-color: burlywood;
+    background-color: #F0C27B;
     display: flex;
     gap:100px;
     align-items: center;
-    justify-content: center;
+    justify-content:space-around;
+    
    
 
 }
 
 a{
-    color: red;
+    color:  #4B1248;
     text-decoration: none;
 }
 
 a:hover{
     font-size: larger;
     font-weight: bolder;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
 }

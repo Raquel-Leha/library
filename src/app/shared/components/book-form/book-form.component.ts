@@ -3,6 +3,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BookITransformed } from 'src/app/core/services/bookServices/book.models';
+import { AuthService } from 'src/app/core/services/authServices/auth.service';
+
 
 @Component({
   selector: 'app-book-form',
@@ -14,11 +16,13 @@ export class BookFormComponent implements OnInit{
   @Input() public book?: BookITransformed;
 
   public bookForm?: FormGroup;
+  
 
   public constructor(
     private fb: FormBuilder,
     private router: Router,
-    private bookService: BookService
+    private bookService: BookService,
+    private authservice: AuthService
 
   ){}
 
@@ -44,18 +48,29 @@ export class BookFormComponent implements OnInit{
 public createBook(){
 
   
+  
   if(this.bookForm?.valid){
-    console.log("he llegado")
+
+    const mail = this.authservice.getEmail();
+
+    const myBooks = {...this.bookForm.value, email: mail}
+   
 
     const bookRequest = this.book
        ? this.bookService.editBook(this.book._id, this.bookForm.value)
-       : this.bookService.addBook(this.bookForm.value);
+       : this.bookService.addBook(myBooks);
 
        
 
     bookRequest.subscribe((book: BookITransformed) => {
       this.bookForm?.reset();
-      this.router.navigateByUrl('book-list');
+      const redirect: boolean = this.authservice.loggedIn();
+      if(redirect){
+        this.router.navigateByUrl('my-books');
+      }else{
+        this.router.navigateByUrl('book-list');
+      }
+      
     });
   }
 }

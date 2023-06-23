@@ -2,20 +2,13 @@
 <div
   class="book"
   *ngIf="bookInfo"
-  [ngClass]="{
-    'book--selected': bookInfo.selected
-  }"
-  (click)="selectBook()"
+ 
 >
   <img class="book__img" [src]="bookInfo.portada" />
  
   
-    <a [routerLink]="['../book-detail', bookInfo._id]">Más información</a>
+  <a class="book__info" [routerLink]="['../book-detail', bookInfo._id]">Más información</a>
     
-    <a [routerLink]="['../edit-book', bookInfo._id]">Editar</a>
-    
-    <button
-      (click)="deleteBook($event)"
-    >Eliminar</button>
+ 
   
 </div>

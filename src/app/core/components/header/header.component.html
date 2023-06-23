@@ -1,20 +1,27 @@
 <header>
-  <a [routerLink]="['home']">Home</a>
+
+ <div class="menu">
+  <a [routerLink]="['home']">Inicio</a>
   <br />
-  <a [routerLink]="['book-list']">Mi colección</a>
-  <br />
-  <a [routerLink]="['new-book']">Añadir libro</a>
-  <br />
-  <div *ngIf="!authService.loggedIn()">
-    <a [routerLink]="['signin']">Sign-in</a>
+  <a [routerLink]="['book-list']">Colección</a>
+ </div>
+ 
+  
+  <div class= "menu" *ngIf="!authService.loggedIn()">
+    <a [routerLink]="['signin']">Mi perfil</a>
     <br />
     <a [routerLink]="['signup']">Registrarse</a>
   </div>
-  <div *ngIf="authService.loggedIn()">
+
+
+  <div class= "menu" *ngIf="authService.loggedIn()">
+    <br />
+    <a [routerLink]="['new-book']">Añadir libro</a>
+    <br />
+    <a [routerLink]="['my-books']">Mis libros</a>
     <br />
     <a (click)= "authService.logout()">LogOut</a>
     <br />
-    <a [routerLink]="['my-books']">Mis libros</a>
   </div>
 
 </header>

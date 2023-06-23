@@ -1,26 +1,25 @@
-<br>
-<input 
-    [(ngModel)]="filterValue"
->
-<select [(ngModel)]="orderBy" (change)="capturar()">
-    <option value="0">Filtrar por ...</option>
-    <option *ngFor="let dato of datos">{{dato}}</option>
-</select>
-
-<br>
-<div class="book__list">
-    <app-book
-        *ngFor="let book of originalBooks |order:verSeleccion | filter:filterValue  |pagination: currentPage" 
-        [bookInfo]="book"
-        (onSelectBook)="selectBook(book)"
-        (onDeleteBook)="deleteBook(book)"
-    ></app-book>
+<div class="div_input">
+  <input [(ngModel)]="filterValue" placeholder="Filtrar por título" />
 </div>
-<button 
-   *ngIf= "currentPage > 1"
-   (click)="changePage(currentPage - 1)">Anterior</button>
-   <span> {{currentPage}} </span>
-<button 
-*ngIf="currentPage < maxPage"
-(click)="changePage(currentPage + 1 )">Siguiente</button>
-<p>Libros seleccionados: {{ counter }}</p>
+
+<br />
+<div class="book__list">
+  <app-book
+    *ngFor="
+      let book of originalBooks
+        | filter : filterValue
+        | pagination : currentPage
+    "
+    [bookInfo]="book"
+  ></app-book>
+</div>
+
+<div class="div_buttons_pages">
+  <button *ngIf="currentPage > 1" (click)="changePage(currentPage - 1)">
+    Anterior
+  </button>
+  <span> {{ currentPage }} </span>
+  <button *ngIf="currentPage < maxPage" (click)="changePage(currentPage + 1)">
+    Siguiente
+  </button>
+</div>

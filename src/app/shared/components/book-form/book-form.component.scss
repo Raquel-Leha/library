@@ -1,12 +1,13 @@
 .error {
-    color: red;
+    color: #4B1248;
 }
 
 
 .container {
 
-    border: 2px solid red;
+   
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -15,17 +16,24 @@
 }
 
 .form_div {
-    color: red;
-    font-weight: bold;
+    color: #4B1248;
+    font-weight: bolder;
     margin: 10px;
-    border: 2px solid red;
     border-radius: 2px;
     padding: 10px;
     width: 500px;
-    background-color: burlywood;
+    background-color: #F0C27B;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
+  
+}
+
+.form_div p {
+   
+    text-align: start;
+    margin-left: 15px;
 }
 
 .form_label {
@@ -35,13 +43,19 @@
 
 
 .button-style {
-    color: red;
+    
     font-weight: bold;
-    background-color: burlywood;
     border: none;
     padding: 10px 30px 10px 30px;
-    border: 2px solid red;
     border-radius: 2px;
     margin-top: 30px;
     
 }
+
+
+
+
+
+
+
+

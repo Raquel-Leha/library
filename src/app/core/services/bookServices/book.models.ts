@@ -12,6 +12,7 @@ export interface BookI {
     paginas: number;
     copias: number;
     selected?: boolean;
+    email: string | null;
 
      
 }
@@ -28,6 +29,7 @@ export interface BookITransformed {
     fechaPublicacion: string;
     paginas: number;
     copias: number;
+    email: string | null;
     
     
 

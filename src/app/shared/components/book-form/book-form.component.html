@@ -64,22 +64,22 @@
 
 <div class="form_div">
     <label class="form_label">Sinopsis:</label>
-    <textarea
+    <input
         placeholder="Sinopsis"
         formControlName="sinopsis"
-    ></textarea>
+    />
     <p
         *ngIf="!bookForm.get('sinopsis')?.valid
             && (bookForm.get('sinopsis')?.dirty || bookForm.get('sinopsis')?.touched)"
         class="error"
-    >La longitud máxima son 1000 caracteres</p>
+    >Longitud máxima, 1000 caracteres</p>
 </div>
 
 
 <div class="form_div">
     <label class="form_label">Portada:</label>
     <input
-        placeholder="URL, imagen de portada"
+        placeholder="URL"
         formControlName="portada"
     >
     <p
@@ -91,17 +91,19 @@
 
 
 <div class="form_div">
-    <label class="form_label">Fecha de publicación:</label>
+    <label class="form_label">Publicación:</label>
     <input
         placeholder="Fecha de publicación"
         formControlName="fechaPublicacion"
     >
+
     <p
         *ngIf="!bookForm.get('fechaPublicacion')?.valid
             && (bookForm.get('fechaPublicacion')?.dirty || bookForm.get('fechaPublicacion')?.touched)"
         class="error"
     >El campo es requerido</p>
 </div>
+
 
 
 <div class="form_div">

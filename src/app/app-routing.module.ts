@@ -36,7 +36,8 @@ const routes: Routes = [
 },
 {
   path: 'new-book',
-  loadChildren: () => import('src/app/features/new-book/new-book.module').then(m => m.NewBookModule)
+  loadChildren: () => import('src/app/features/new-book/new-book.module').then(m => m.NewBookModule),
+  canActivate: [AuthGuard]
 },
 {
   path: 'edit-book/:_id',

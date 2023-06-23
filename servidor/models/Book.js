@@ -36,7 +36,11 @@ const BookSchema = mongoose.Schema({
     },
     copias: {
         type: Number
+    },
+    email: {
+        type: String
     }
+   
 
 }, {
     collection: 'books'

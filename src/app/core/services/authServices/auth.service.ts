@@ -6,6 +6,9 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
+
+
+
 export class AuthService {
 
   private url: string = 'http://localhost:4000/api/users';
@@ -28,8 +31,13 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
+ getEmail(){
+  return localStorage.getItem('email');
+ }
+
   logout(){
     localStorage.removeItem('token');
+    localStorage.removeItem('email');
     this.router.navigate(['/signin']);
   }
 
