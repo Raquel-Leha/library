@@ -1,14 +1,14 @@
 @import './elements/elements.scss';
 
 
-html {
-    min-height: 100%;
-    position: relative;
+
+html{
+    height: 100%;
 }
-
-
 body {
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     box-sizing: border-box;
     background: #F0C27B;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #4B1248, #F0C27B);  /* Chrome 10-25, Safari 5.1-6 */

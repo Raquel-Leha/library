@@ -24,11 +24,12 @@
 
 <div class="form_div">
     
-    <label class="form_label">Autor:</label>
-    <input
-        placeholder="Autor"
-        formControlName="autor"
-    >
+        <label class="form_label">Autor:</label>
+        <input
+            placeholder="Autor"
+            formControlName="autor"
+        >
+  
     <p
         *ngIf="!bookForm.get('autor')?.valid
             && (bookForm.get('autor')?.dirty || bookForm.get('autor')?.touched)"

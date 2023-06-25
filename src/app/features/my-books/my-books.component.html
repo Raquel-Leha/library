@@ -1,11 +1,13 @@
 <br>
 
 
+<div class="box">
+    <select [(ngModel)]="orderBy" (change)="capturar()">
+        <option value="0">Ordenar por ...</option>
+        <option *ngFor="let dato of datos">{{dato}}</option>
+    </select>
+</div>
 
-<select [(ngModel)]="orderBy" (change)="capturar()">
-    <option value="0">Ordenar por ...</option>
-    <option *ngFor="let dato of datos">{{dato}}</option>
-</select>
 
 
 

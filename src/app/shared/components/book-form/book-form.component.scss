@@ -21,10 +21,9 @@
     margin: 10px;
     border-radius: 2px;
     padding: 10px;
-    width: 500px;
+    min-width: 500px;
     background-color: #F0C27B;
-    display: flex;
-    flex-wrap: nowrap;
+   
     align-items: center;
     justify-content: flex-start;
   
@@ -32,13 +31,20 @@
 
 .form_div p {
    
-    text-align: start;
+    text-align: center;
     margin-left: 15px;
+    margin-top: 10px;
 }
 
 .form_label {
     margin-right: 15px;
 }
+
+
+input {
+    width: 100%;
+}
+
 
 
 
